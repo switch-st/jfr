@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+	<max_thread_num>10</max_thread_num>
+	<max_job_num>20</max_job_num>
+	<max_runline_num>5</max_runline_num>
+	<log_prefix>jfr</log_prefix>
+	<log_2_dev>false</log_2_dev>
+	<debug_level>0</debug_level>
+	<daemonize>false</daemonize>
+</root>
+

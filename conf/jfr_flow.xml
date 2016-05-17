@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root>
+	<!-- 参数类型：固定、来自之前模块的出参 -->
+	<!-- 模块的入参和出参为入口函数的参数；进程的入参为命令行参数，出参为程序终端打印 -->
+	<!-- 触发机制 通过触发函数来触发，设置一些默认触发函数 -->
+
+	<!-- 模块 (模块名称、模块类型、入口函数名、模块文件名、描述) -->
+	<module>
+		<module name='' type='' main='' file='' desc='' />
+		<module name='' type='' main='' file='' desc='' />
+	</module>
+
+	<!-- 触发器 (触发器名称、触发器类型、入口函数名、触发器文件名、描述) -->
+	<trigger>
+		<trigger name='' type='' main='' file='' desc='' />
+	</trigger>
+
+	<!-- 静态模块，系统启动时运行一次，为其他模块提供一致的调用结果 -->
+	<static_module>
+		<static_module name='' type='' main='' file='' desc='' argv_in='' argv_out='' />
+	</static_module>
+
+	<!-- 主线 (主线名、描述) -->
+	<main_line>
+		<line name='' desc='' >
+			<trigger trig_name='' argv_in='' argv_out='' />
+			<module mod_name='' argv_in='' argv_out='' >
+				<requirement>
+					<mod name='' ret_val='' />
+					<mod name='' ret_val='' />
+				</requirement>
+				<equivalent>
+					<mod name='' />
+				</equivalent>
+			</module>
+			<module mod_name='' argv_in='' argv_out='' >
+				<requirement>
+					<mod name='' ret_val='' />
+				</requirement>
+				<equivalent>
+					<mod name='' />
+				</equivalent>
+			</module>
+		</line>
+	</main_line>
+</root>
+
